@@ -3,9 +3,12 @@ var barcode = require('barcode');
 var firebase = require('firebase');
 // replace the value below with the Telegram token you receive from @BotFather
 const token = '591327486:AAEoVPWsWzkdqNeg2cqCu4iNc-gXWc-8d4U';
+const token1 = '591474766:AAF4ehNAjAn5opHKfv8YvTfKiYDEHlIDTJQ';
+
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
+const bot1 = new TelegramBot(token1, {polling: true});
 var config = {
    apiKey: "AIzaSyAet4VmmuhViG6LgrAi7XAR0zzbccSUFPA",
    authDomain: "shops-db02f.firebaseapp.com",
@@ -16,6 +19,14 @@ var config = {
 
  // Get a reference to the database service
  var database = firebase.database();
+
+
+bot1.on('message', (msg) => {
+  const chatId = msg.chat.id;
+
+  // send a message to the chat acknowledging receipt of their message
+  bot1.sendMessage(chatId, 'Received your message');
+});
 
 // Matches "/echo [whatever]"
 bot.onText(/\/start/, (msg, match) => {
