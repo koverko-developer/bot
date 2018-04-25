@@ -65,7 +65,7 @@ function regUser(msg){
 }
 
 function screenHello(msg, start = true) {
-  bot.sendGame(msg.chat.id, gameName);
+  
   const text = start ? 'Привет, '+msg.from.first_name+'!\nВсем, кому интересно провести время в кругу хорошей компании и увлекательных игр, проверить свою интуицию и получить массу удовольствий, позитива, положительных эмоций.\nДобро пожаловать!\nКлуб друзей ВТЕМЕ ждет Вас!' :'' ;
 
   bot.sendMessage(msg.chat.id, text,{
