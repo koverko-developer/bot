@@ -23,7 +23,5 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 // messages.
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
-
-  // send a message to the chat acknowledging receipt of their message
-  bot.sendMessage(chatId, 'Received your message');
+  bot.sendPhoto(msg.chat.id,"https://service-online.su/text/generator-shtrih-koda/gen_cod.php?cod='+chatId+'&w=1000&h=250&type_cod=EAN-13" );
 });
