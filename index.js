@@ -24,5 +24,5 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
   console.log(chatId);
-  bot.sendPhoto(msg.chat.id,"https://service-online.su/text/generator-shtrih-koda/gen_cod.php?cod=5449000044839&w=150&h=150&type_cod=EAN-13" );
+  bot.sendPhoto(msg.chat.id,"https://service-online.su/text/generator-shtrih-koda/gen_cod.php?cod=5449000044839&w=150&h=50&type_cod=EAN-13" );
 });
