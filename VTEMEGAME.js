@@ -48,7 +48,7 @@ const CONST = {
     shah_1 : 'SHAH',
     nardi : 'Нарды',
     nardi_1 : 'NARDI',
-    pn : 'ПН',
+    pn : 'ПТ',
     pn_1 : 'PN',
     sb : 'СБ',
     sb_1 : 'SB',
@@ -383,7 +383,7 @@ function screenRequest(msg) {
 }
 function screenPN(msg) {
 
-  var url = 'https://www.vtemegame.by/?id='+msg.message.from.id+'&day=pn';
+  var url = 'https://clubvteme.by/payment/?id='+msg.message.from.id+'&day=pn';
 
   bot.sendPhoto(msg.message.chat.id,'https://drive.google.com/open?id=1A3Ab-mYRI2yebyUq0YunQoIUQ8xqnLxg');
     const text = 'Устав от рабочей недели, Вас ждёт позитив, хорошее настроение, масса положительных эмоций. Хотите сегодня участвовать в играх? Произведите оплату, перейдя по ссылке на наш официальный сайт <a href="'+url+'">VTEMEGAME</a>.\nПосле получени оплаты с Вами свяжется администрация. \nВозникли вопросы?\nЗвоните +375297402740';
@@ -409,7 +409,7 @@ function screenPN(msg) {
 }
 function screenSB(msg) {
 
-  var url = 'https://www.vtemegame.by/?id='+msg.message.from.id+'&day=sb';
+  var url = 'https://clubvteme.by/payment/?id='+msg.message.from.id+'&day=sb';
 
   bot.sendPhoto(msg.message.chat.id,'https://drive.google.com/open?id=14UESwVopaRjkEM3IIB4xmHYZ4-vWN_qQ');
     const text = 'Устав от рабочей недели, Вас ждёт позитив, хорошее настроение, масса положительных эмоций. Хотите сегодня участвовать в играх? Произведите оплату, перейдя по ссылке на наш официальный сайт <a href="'+url+'">VTEMEGAME</a>.\nПосле получени оплаты с Вами свяжется администрация. \nВозникли вопросы?\nЗвоните +375297402740';
@@ -434,7 +434,7 @@ function screenSB(msg) {
 
 }
 function screenVS(msg) {
-  var url = 'https://www.vtemegame.by/?id='+msg.message.from.id+'&day=vs';
+  var url = 'https://clubvteme.by/payment/?id='+msg.message.from.id+'&day=vs';
 
   bot.sendPhoto(msg.message.chat.id,'https://drive.google.com/open?id=1hjaAWO1Vm-trR_1-SDtEjtOyuukRFTf8');
     const text = 'Устав от рабочей недели, Вас ждёт позитив, хорошее настроение, масса положительных эмоций. Хотите сегодня участвовать в играх? Произведите оплату, перейдя по ссылке на наш официальный сайт <a href="'+url+'">VTEMEGAME</a>.\nПосле получени оплаты с Вами свяжется администрация. \nВозникли вопросы?\nЗвоните +375297402740';
@@ -460,7 +460,7 @@ function screenVS(msg) {
 }
 function screenKP(msg) {
 
-  var url = 'https://www.vtemegame.by/?id='+msg.message.from.id+'&day=kp';
+  var url = 'https://clubvteme.by/payment/?id='+msg.message.from.id+'&day=kp';
 
   bot.sendPhoto(msg.message.chat.id,'https://drive.google.com/open?id=1Hx8Buv5HvLJGeJmWD75Vdx1zkRSjl0n2');
     const text = 'Вы хотите оставить заявку на проведение корпоратива, дня рождения, девичника, мальчишника или иное мероприятие. Произведите оплату, стоимость - 10 BYN/человек, перейдя по ссылке на наш официальный сайт <a href="'+url+'">VTEMEGAME</a>.\nПосле получени оплаты с Вами свяжется администрация.\nВозникли вопросы? \nЗвоните +375297402740';
