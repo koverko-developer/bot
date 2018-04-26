@@ -58,7 +58,7 @@ const CONST = {
     back_to_request_1 : "back_to_request_1",
     korporativ :'Корпоратив',
     korporativ_1 : "korporativ_1",
-    oplata : 'Оплатить',
+    oplata : 'Оплатить сейчас',
     oplata_1 : 'oplata_1',
 
 };
