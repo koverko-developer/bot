@@ -57,7 +57,9 @@ const CONST = {
     back_to_request :'Назад',
     back_to_request_1 : "back_to_request_1",
     korporativ :'Корпоратив',
-    korporativ_1 : "korporativ_1"
+    korporativ_1 : "korporativ_1",
+    oplata : 'Оплатить',
+    oplata_1 : 'oplata_1',
 
 };
 
@@ -153,6 +155,9 @@ bot.on('callback_query', query => {
       case CONST.nardi_1:
         screenNardi(query);
         break;
+      case CONST.oplata_1:
+        screenOplata(query);
+        break;
   }
 
   if ( query.game_short_name ) {
@@ -234,6 +239,12 @@ function screenMenu(msg){
           {
             text : CONST.request ,
             callback_data : CONST.request_1
+          }
+        ],
+         [
+          {
+            text : CONST.oplata ,
+            callback_data : CONST.oplata_1
           }
         ]
       ]
@@ -401,6 +412,29 @@ function screenPN(msg) {
             text : CONST.back_to_request ,
             callback_data : CONST.back_to_request_1
           }
+        ]
+      ]
+    }
+  });
+
+}
+
+function screenOplata(msg) {
+
+  var url = 'https://clubvteme.by/payment/?id='+msg.message.from.id+'&day=123';
+
+  
+    const text = 'Добро пожаловать в клуб. Оплатите вход.\n<a href="'+url+'">ОПЛАТИТЬ</a>.';
+
+  bot.sendMessage(msg.message.chat.id, text,{
+    parse_mode : "HTML",
+    reply_markup: {
+      inline_keyboard : [
+        [
+          {
+            text : CONST.menu ,
+            callback_data : 'MENU'
+          }         
         ]
       ]
     }
