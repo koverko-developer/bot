@@ -94,7 +94,22 @@ bot.onText(/\/start/, msg => {
 });
 
 bot.on('message', (msg) => {
-
+    var info = "О клубе";
+    if (msg.text.indexOf(info) === 0) {
+          screenInfo(msg);
+    }
+    var games = "Игры";
+    if (msg.text.indexOf(games) === 0) {
+          screenGames(msg);;
+    }
+    var request = "Оставить заявку";
+    if (msg.text.indexOf(request) === 0) {
+         screenRequest(msg);
+    }
+    var paymant = "Оплатить сейчас";
+    if (msg.text.indexOf(paymant) === 0) {
+         screenOplata(msg);
+    }
 });
 // bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 //   bot.answerCallbackQuery(callbackQuery.id, { url });
