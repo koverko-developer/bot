@@ -78,7 +78,7 @@ bot.onText(/\/start/, msg => {
   const chatId = msg.chat.id;
   console.log(msg);
   var userId = msg.from.id;
-  firebase.database().ref('/botshops/users/' + userId).once('value').then(function(snapshot) {
+  firebase.database().ref('/botshopsusers/' + userId).once('value').then(function(snapshot) {
     var username = (snapshot.val() && snapshot.val().id) || 'Anonymous';
     if(username === 'Anonymous'){
         regUser(msg);
@@ -210,7 +210,7 @@ function regUser(msg){
   var first_name = '';
   if(msg.from.first_name)first_name = msg.from.first_name;
 
-  firebase.database().ref('/botshops/users/' + msg.from.id).set({
+  firebase.database().ref('/botshopsusers/' + msg.from.id).set({
     id: msg.from.id,
     balls: 0,
     visitors : 0,
