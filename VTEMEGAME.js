@@ -3,6 +3,8 @@
 
 const TelegramBot = require('node-telegram-bot-api');
 var firebase = require('firebase');
+var express = require('express')
+  , bodyParser = require('body-parser');
 
 const token = '591474766:AAF4ehNAjAn5opHKfv8YvTfKiYDEHlIDTJQ';
 const bot = new TelegramBot(token, {polling: true});
@@ -16,6 +18,15 @@ var config = {
 
  // Get a reference to the database service
  var database = firebase.database();
+
+app.use(bodyParser.json());
+
+app.post('/check/', function(request, response){
+  console.log(request.body); 
+   
+});
+
+app.listen(3000);
 
 const CONST = {
 
@@ -224,7 +235,7 @@ function screenMenu(msg){
 
   bot.sendPhoto(msg.message.chat.id,'https://pp.userapi.com/c830608/v830608772/db0f2/Mq3QcIRWk4Y.jpg',{
     reply_markup: {
-      inline_keyboard : [
+      keyboard : [
         [
           {
             text : CONST.info ,
