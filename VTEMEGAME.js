@@ -283,7 +283,7 @@ function screenInfo(msg) {
 
     const text = 'В нашем Клубе большой выбор настольных игр, караоке, кальян, чай, кофе, угощения, проведение дней рождений, корпоративов, вечерние киносеансы. \nУютная атмосфера и приятное общение и креативный персонал не оставят Вас равнодушными. \nПрисоединяйтесь к нашему чату: \n<a href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Finvite.viber.com%2F%3Fg%3DNQ9wKUH6r0f-p6lIyBJTZJGctsnlxEyd">ВТЕМЕ game</a>.';
 
-    bot.sendMessage(msg.message.chat.id, text,{
+    bot.sendMessage(msg.chat.id, text,{
       parse_mode : "HTML",
       reply_markup: {
         inline_keyboard : [
@@ -300,7 +300,7 @@ function screenInfo(msg) {
 
 function screenGames(msg) {
 
-  bot.sendPhoto(msg.message.chat.id,'https://pp.userapi.com/c830608/v830608613/d8ff5/8pWvHXc1Ofw.jpg',{
+  bot.sendPhoto(msg.chat.id,'https://pp.userapi.com/c830608/v830608613/d8ff5/8pWvHXc1Ofw.jpg',{
     reply_markup: {
       inline_keyboard : [
         [
@@ -382,7 +382,7 @@ function screenGames(msg) {
 
 function screenRequest(msg) {
   const text = 'В данном разделе Вы можете оставить заявку на участие в игре, в тот или иной день. Достаточно просто выбрать.\nТакже оставить заявку на проведение корпоративов, дней рождений и иных мероприятий, выбрав вкладку Корпоратив. \nИ оплатить участие.';
-  bot.sendMessage(msg.message.chat.id, text,{
+  bot.sendMessage(msg.chat.id, text,{
     parse_mode : "HTML",
     reply_markup: {
       inline_keyboard : [
@@ -452,7 +452,7 @@ function screenOplata(msg) {
   
     const text = 'Добро пожаловать в клуб. Оплатите вход.\n<a href="'+url+'">ОПЛАТИТЬ</a>.';
 
-  bot.sendMessage(msg.message.chat.id, text,{
+  bot.sendMessage(msg.chat.id, text,{
     parse_mode : "HTML",
     reply_markup: {
       inline_keyboard : [
