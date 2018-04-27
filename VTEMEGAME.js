@@ -250,7 +250,7 @@ function screenMenu(msg){
 
   bot.sendPhoto(msg.message.chat.id,'https://pp.userapi.com/c830608/v830608772/db0f2/Mq3QcIRWk4Y.jpg',{
     reply_markup: {
-      keyboard : [
+      resize_keyboard : [
         [
           {
             text : CONST.info ,
