@@ -3,8 +3,8 @@
 
 const TelegramBot = require('node-telegram-bot-api');
 var firebase = require('firebase');
-var express = require('express')
-  , bodyParser = require('body-parser');
+const express        = require('express');
+const bodyParser     = require('body-parser');
 var app = express();
 const token = '591474766:AAF4ehNAjAn5opHKfv8YvTfKiYDEHlIDTJQ';
 const bot = new TelegramBot(token, {polling: true});
@@ -19,11 +19,13 @@ var config = {
  // Get a reference to the database service
  var database = firebase.database();
 
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/check/', function(request, response){
-  console.log(request.body);
-  response.send(request.body.id); 
+app.post('/chek/', function(request, response){
+  const id = request.params.id;
+  const url_chek = request.params.url_chek;
+  //console.log(request.body);
+  response.send(id + '\n'+url_chek); 
    
 });
 
