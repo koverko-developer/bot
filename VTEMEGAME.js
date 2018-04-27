@@ -5,7 +5,7 @@ const TelegramBot = require('node-telegram-bot-api');
 var firebase = require('firebase');
 var express = require('express')
   , bodyParser = require('body-parser');
-var app = express();
+//var app = express();
 const token = '591474766:AAF4ehNAjAn5opHKfv8YvTfKiYDEHlIDTJQ';
 const bot = new TelegramBot(token, {polling: true});
 var config = {
@@ -19,14 +19,14 @@ var config = {
  // Get a reference to the database service
  var database = firebase.database();
 
-app.use(bodyParser.json());
+/*app.use(bodyParser.json());
 
 app.post('/check/', function(request, response){
   console.log(request.body); 
    
 });
 
-app.listen(3000);
+app.listen(3000);*/
 
 const CONST = {
 
