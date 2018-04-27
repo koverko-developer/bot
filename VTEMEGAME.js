@@ -447,7 +447,7 @@ function screenPN(msg) {
 
 function screenOplata(msg) {
 
-  var url = 'https://clubvteme.by/payment/?id='+msg.message.from.id+'&day=123';
+  var url = 'https://clubvteme.by/payment/?id='+msg.from.id+'&day=123';
 
   
     const text = 'Добро пожаловать в клуб. Оплатите вход.\n<a href="'+url+'">ОПЛАТИТЬ</a>.';
