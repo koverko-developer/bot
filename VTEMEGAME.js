@@ -210,7 +210,7 @@ function regUser(msg){
   var first_name = '';
   if(msg.from.first_name)first_name = msg.from.first_name;
 
-  firebase.database().ref('/botshopsusers/' + msg.from.id).set({
+  firebase.database().ref('/botshops/users/' + msg.from.id).set({
     id: msg.from.id,
     balls: 0,
     visitors : 0,
