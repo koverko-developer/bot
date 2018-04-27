@@ -22,7 +22,8 @@ var config = {
 app.use(bodyParser.json());
 
 app.post('/check/', function(request, response){
-  console.log(request.body); 
+  console.log(request.body);
+  response.send(request.body); 
    
 });
 
