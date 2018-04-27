@@ -26,8 +26,8 @@ app.post('/chek/', function(request, response){
   const url_chek = request.body.url_chek;
   //console.log(request.body);
   response.send(id + '\n'+url_chek); 
-  bot.sendMessage(472342085, 'Ваш чек.');
-  
+  bot.sendMessage(id, 'Ваш чек.');
+  bot.sendPhoto(id,url_chek);
    
 });
 
