@@ -22,8 +22,8 @@ var config = {
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/chek/', function(request, response){
-  const id = request.params.id;
-  const url_chek = request.params.url_chek;
+  const id = request.body.id;
+  const url_chek = request.body.url_chek;
   //console.log(request.body);
   response.send(id + '\n'+url_chek); 
    
