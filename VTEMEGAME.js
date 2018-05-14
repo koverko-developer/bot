@@ -24,7 +24,7 @@ var config = {
  // Get a reference to the database service
  var database = firebase.database();
 
-/*app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/chek/', function(request, response){
   const id = request.body.id;
@@ -36,7 +36,7 @@ app.post('/chek/', function(request, response){
    
 });
 
-app.listen(3000);*/
+app.listen(3000);
 
 http.listen(port, () => {
     console.log('localhost: ', port);
