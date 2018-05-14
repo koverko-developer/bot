@@ -5,11 +5,7 @@ const TelegramBot = require('node-telegram-bot-api');
 var firebase = require('firebase');
 const express        = require('express');
 const bodyParser     = require('body-parser');
-var app = require('express')(),
-    http = require('http').createServer(app),
-    io = require('socket.io')(http),
-    port = process.env.PORT || 3000,
-    publicDir = `${__dirname}/public`
+var app = require('express');
 
 const token = '591474766:AAF4ehNAjAn5opHKfv8YvTfKiYDEHlIDTJQ';
 const bot = new TelegramBot(token, {polling: true});
@@ -42,20 +38,20 @@ http.listen(port, () => {
     console.log('localhost: ', port);
 })
 
-app
-    //.use(publicDir)
-    .get('/', (req, res) =>{
-      res.sendFile(`${publicDir}/client.html`)
-    })
-    .get('/streaming', (req, res) => {
-      res.sendFile(`${publicDir}/server.html`)
-    })
-io.on('connection', (socket) =>{
-    socket.on('streaming', (image) =>{
-        io.emit('play stream', image)
-        //console.log(image);
-    })
-})
+// app
+//     //.use(publicDir)
+//     .get('/', (req, res) =>{
+//       res.sendFile(`${publicDir}/client.html`)
+//     })
+//     .get('/streaming', (req, res) => {
+//       res.sendFile(`${publicDir}/server.html`)
+//     })
+// io.on('connection', (socket) =>{
+//     socket.on('streaming', (image) =>{
+//         io.emit('play stream', image)
+//         //console.log(image);
+//     })
+// })
 
 
 const CONST = {
