@@ -34,9 +34,9 @@ app.post('/chek/', function(request, response){
 
 app.listen(3000);
 
-http.listen(port, () => {
-    console.log('localhost: ', port);
-})
+// http.listen(port, () => {
+//     console.log('localhost: ', port);
+// })
 
 // app
 //     //.use(publicDir)
